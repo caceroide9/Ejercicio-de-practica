@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1401048862 source:c:\users\lenovo-utem\desktop\colaestatica\clasecolaestatica.cpp
+	"clasecolaestatica.h"
+
+1401048862 c:\users\lenovo-utem\desktop\colaestatica\clasecolaestatica.h
+
+1401049571 source:c:\users\lenovo-utem\desktop\colaestatica\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1401049536 c:\users\lenovo-utem\desktop\colaestatica\funciones.h
+	"clasecolaestatica.h"
+
+1401049593 source:c:\users\lenovo-utem\desktop\colaestatica\main.cpp
+	<iostream>
+	"clasecolaestatica.h"
+	"funciones.h"
+
+1401052462 source:c:\users\acer\desktop\1411\colaestatica\colaestatica\clasecolaestatica.cpp
+	"clasecolaestatica.h"
+
+1401052462 c:\users\acer\desktop\1411\colaestatica\colaestatica\clasecolaestatica.h
+
+1510722353 source:c:\users\acer\desktop\1411\colaestatica\colaestatica\main.cpp
+	<iostream>
+	"clasecolaestatica.h"
+	"funciones.h"
+
+1510722823 c:\users\acer\desktop\1411\colaestatica\colaestatica\funciones.h
+	"clasecolaestatica.h"
+
+1510722830 source:c:\users\acer\desktop\1411\colaestatica\colaestatica\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1401048862 source:c:\users\mathi\desktop\caceroide-tad-cola\caceroide tad cola\clasecolaestatica.cpp
+	"clasecolaestatica.h"
+
+1401048862 c:\users\mathi\desktop\caceroide-tad-cola\caceroide tad cola\clasecolaestatica.h
+
+1510715630 source:c:\users\mathi\desktop\caceroide-tad-cola\caceroide tad cola\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1510715623 c:\users\mathi\desktop\caceroide-tad-cola\caceroide tad cola\funciones.h
+	"clasecolaestatica.h"
+
+1510715655 source:c:\users\mathi\desktop\caceroide-tad-cola\caceroide tad cola\main.cpp
+	<iostream>
+	"clasecolaestatica.h"
+	"funciones.h"
+

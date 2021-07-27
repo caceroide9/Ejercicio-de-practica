@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1400939363 source:c:\users\lenovo-utem\desktop\clasestackestatico\main.cpp
+	<iostream>
+	"stack.h"
+	"funciones.h"
+
+1400939087 c:\users\lenovo-utem\desktop\clasestackestatico\stack.h
+
+1400939063 source:c:\users\lenovo-utem\desktop\clasestackestatico\stack.cpp
+	"stack.h"
+
+1401046296 source:c:\users\lenovo-utem\desktop\clasestackestatico\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1401046267 c:\users\lenovo-utem\desktop\clasestackestatico\funciones.h
+	"stack.h"
+
+1400942663 source:c:\users\acer\desktop\1411\clasestackestatico\clasestackestatico\stack.cpp
+	"stack.h"
+
+1400942687 c:\users\acer\desktop\1411\clasestackestatico\clasestackestatico\stack.h
+
+1510705753 source:c:\users\acer\desktop\1411\clasestackestatico\clasestackestatico\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1510706810 c:\users\acer\desktop\1411\clasestackestatico\clasestackestatico\funciones.h
+	"stack.h"
+
+1510705766 source:c:\users\acer\desktop\1411\clasestackestatico\clasestackestatico\main.cpp
+	<iostream>
+	"stack.h"
+	"funciones.h"
+
+1510699644 source:c:\users\mathi\desktop\caceroide-stack\clasestackestatico\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1510699610 c:\users\mathi\desktop\caceroide-stack\clasestackestatico\funciones.h
+	"stack.h"
+
+1400939087 c:\users\mathi\desktop\caceroide-stack\clasestackestatico\stack.h
+
+1510699644 source:c:\users\mathi\desktop\caceroide-stack\clasestackestatico\main.cpp
+	<iostream>
+	"stack.h"
+	"funciones.h"
+
+1400939063 source:c:\users\mathi\desktop\caceroide-stack\clasestackestatico\stack.cpp
+	"stack.h"
+

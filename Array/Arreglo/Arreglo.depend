@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1504131414 source:c:\users\mathías\desktop\3008\arreglo\funcion.cpp
+	<iostream>
+
+1504130986 source:c:\users\mathías\desktop\3008\arreglo\main.cpp
+	<iostream>
+	"funcion.h"
+
+1504130986 c:\users\mathías\desktop\3008\arreglo\funcion.h
+
+1504127814 source:c:\users\mathi\desktop\arreglo-mathias\arreglo\funcion.cpp
+	<iostream>
+
+1504127933 source:c:\users\mathi\desktop\arreglo-mathias\arreglo\main.cpp
+	<iostream>
+	"funcion.h"
+
+1504127814 c:\users\mathi\desktop\arreglo-mathias\arreglo\funcion.h
+

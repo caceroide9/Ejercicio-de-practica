@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1396970554 source:c:\users\admin\desktop\lcs\main.cpp
+	<iostream>
+	"operadores.h"
+
+1396969920 c:\users\admin\desktop\lcs\operadores.h
+
+1396970554 source:c:\users\admin\desktop\lcs\operadores.cpp
+	<iostream>
+	"operadores.h"
+
+1413342701 source:c:\users\lenovo-utem\google drive\equipoprof20142\edatos20142\semana7\lcs\main.cpp
+	<iostream>
+	"LCS.h"
+
+1413340086 c:\users\lenovo-utem\google drive\equipoprof20142\edatos20142\semana7\lcs\operadores.h
+
+1413340086 source:c:\users\lenovo-utem\google drive\equipoprof20142\edatos20142\semana7\lcs\operadores.cpp
+	<iostream>
+	"operadores.h"
+
+1413340086 c:\users\lenovo-utem\google drive\equipoprof20142\edatos20142\semana7\lcs\lcs.h
+
+1413342862 source:c:\users\lenovo-utem\google drive\equipoprof20142\edatos20142\semana7\lcs\lcs.cpp
+	<iostream>
+	"LCS.h"
+
+1505341441 source:c:\users\xuloski\desktop\lcs\lcs.cpp
+	<iostream>
+	"LCS.h"
+
+1505341441 c:\users\xuloski\desktop\lcs\lcs.h
+
+1505341441 source:c:\users\xuloski\desktop\lcs\main.cpp
+	<iostream>
+	"LCS.h"
+

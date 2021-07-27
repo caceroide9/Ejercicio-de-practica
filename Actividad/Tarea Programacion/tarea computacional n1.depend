@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1462577094 source:c:\users\juan carlos\desktop\daniel\c\tarea computacional n1\funciones.c
+
+1462577015 source:c:\users\juan carlos\desktop\daniel\c\tarea computacional n1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1462577094 source:c:\users\juan carlos\desktop\daniel\c\hernandezcalfuqueotarea1ayp\funciones.c
+
+1462579896 source:c:\users\juan carlos\desktop\daniel\c\hernandezcalfuqueotarea1ayp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1462583534 source:c:\users\jaime gonzàlez\downloads\telegram desktop\hernandezcalfuqueotarea1ayp\funciones.c
+
+1462583496 source:c:\users\jaime gonzàlez\downloads\telegram desktop\hernandezcalfuqueotarea1ayp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1462579934 source:c:\users\mathi\desktop\hernandezcalfuqueotarea1ayp\hernandezcalfuqueotarea1ayp\funciones.c
+
+1462579896 source:c:\users\mathi\desktop\hernandezcalfuqueotarea1ayp\hernandezcalfuqueotarea1ayp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
