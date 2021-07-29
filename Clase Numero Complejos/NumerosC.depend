@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1627528870 source:c:\users\mathi\onedrive\escritorio\c++\as\main.cpp
+	<iostream>
+	"Complejo.h"
+
+1627528806 c:\users\mathi\onedrive\escritorio\c++\as\include\complejo.h
+
+1627528937 source:c:\users\mathi\onedrive\escritorio\c++\as\src\complejo.cpp
+	"Complejo.h"
+	<iostream>
+	<math.h>
+
+1627529021 source:c:\users\mathi\desktop\practica\clase numero complejos\main.cpp
+	<iostream>
+	"Complejo.h"
+
+1627528806 c:\users\mathi\desktop\practica\clase numero complejos\include\complejo.h
+
+1627528937 source:c:\users\mathi\desktop\practica\clase numero complejos\src\complejo.cpp
+	"Complejo.h"
+	<iostream>
+	<math.h>
+
