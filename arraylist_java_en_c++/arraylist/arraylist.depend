@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1536014151 source:c:\users\acer\desktop\edd\ejercicios 1\ensayo\arraylist\src\arraylist.cpp
+	"arraylist.h"
+
+1536114432 c:\users\acer\desktop\edd\ejercicios 1\ensayo\arraylist\include\arraylist.h
+
+1536114269 source:c:\users\acer\desktop\edd\ejercicios 1\ensayo\arraylist\main.cpp
+	<iostream>
+	"arraylist.h"
+	<string>
+
+1627678877 source:c:\users\mathi\desktop\arraylist\arraylist\main.cpp
+	<iostream>
+	"arraylist.h"
+	<string>
+
+1627678877 c:\users\mathi\desktop\arraylist\arraylist\include\arraylist.h
+
