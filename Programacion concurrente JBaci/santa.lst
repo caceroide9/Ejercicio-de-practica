@@ -1,0 +1,80 @@
+BACI System: C-- to PCODE Compiler, 10/03/2010
+Source file: C:\Users\mathi\Downloads\santa.cm  Wed Jul 14 15:05:01 2021
+ line  pc
+   1    0  semaphore mutex=1;
+   2    0  semaphore santasem=0;
+   3    0  semaphore renossem=0;
+   4    0  semaphore duendessem=0;
+   5    0  
+   6    0  
+   7    0  void santaclaus(){
+   8    0  	int totalrenos=6;
+   9    3  	int numduendes=3;
+  10    6  	int duendes=0;
+  11    9  	int renos=0;
+  12   12  	while(1){
+  13   14  		wait(santasem);
+  14   16  		wait(mutex);
+  15   18  		if (renos=totalrenos) {
+  16   22  		signal(renossem);
+  17   24  		cout<<"Santa ayuda a los duendes"<<endl;
+  18   26  		signal(mutex);
+  19   28  		}
+  20   28  		else{
+  21   29  			if(duendes = numduendes) {
+  22   33  			cout<<"Santa sale a entregar regalos"<<endl;
+  23   35  			signal(duendessem);
+  24   37  			signal(mutex);
+  25   39  			break;
+  26   40  			}
+  27   40  			else{
+  28   41  				
+  29   41  				}
+  30   41  		}
+  31   41  	}	
+  32   42  }
+  33   43  void renos(){
+  34   43  	int totalrenos=6;
+  35   46  	int numduendes=3;
+  36   49  	int duendes=0;
+  37   52  	int renos=0;
+  38   55  	while(1){
+  39   57  		wait(mutex);
+  40   59  		if(renos==(totalrenos-1)){
+  41   65  			renos++;
+  42   70  			signal(santasem);
+  43   72  			cout<<"Ultimo reno llego de vacaciones"<<endl;
+  44   74  			signal(mutex);
+  45   76  			wait(renossem);
+  46   78  			break;
+  47   79  			renos=0;}
+  48   82  		else{
+  49   83  			renos++;
+  50   88  			cout<<"Llega el reno"<<" "<<renos<<endl;
+  51   93  			signal(mutex);}
+  52   95  	}
+  53   96  }
+  54   97  void duende(){
+  55   97  	int totalrenos=6;
+  56  100  	int numduendes=3;
+  57  103  	int duendes=0;
+  58  106  	int renos=0;
+  59  109  	while(1){
+  60  111  		wait(mutex);
+  61  113  		if(duendes==(numduendes-1)){
+  62  119  			duendes++;
+  63  124  			signal(santasem);
+  64  126  			cout<<"Tres duendes despiertan a Santa"<<endl;
+  65  128  			signal(mutex);
+  66  130  			wait(duendessem);
+  67  132  			duendes=0;
+  68  135  			break;}
+  69  136  		else{
+  70  137  		    duendes++;
+  71  142  		    signal(mutex);}
+  72  144  	}
+  73  145  }
+  74  146  void main(){ 
+  75  147  	cobegin{
+  76  148  	santaclaus();renos();duende();}
+  77  158  	}

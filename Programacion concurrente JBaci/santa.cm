@@ -1,0 +1,77 @@
+semaphore mutex=1;
+semaphore santasem=0;
+semaphore renossem=0;
+semaphore duendessem=0;
+
+
+void santaclaus(){
+	int totalrenos=6;
+	int numduendes=3;
+	int duendes=0;
+	int renos=0;
+	while(1){
+		wait(santasem);
+		wait(mutex);
+		if (renos=totalrenos) {
+		signal(renossem);
+		cout<<"Santa ayuda a los duendes"<<endl;
+		signal(mutex);
+		}
+		else{
+			if(duendes = numduendes) {
+			cout<<"Santa sale a entregar regalos"<<endl;
+			signal(duendessem);
+			signal(mutex);
+			break;
+			}
+			else{
+				
+				}
+		}
+	}	
+}
+void renos(){
+	int totalrenos=6;
+	int numduendes=3;
+	int duendes=0;
+	int renos=0;
+	while(1){
+		wait(mutex);
+		if(renos==(totalrenos-1)){
+			renos++;
+			signal(santasem);
+			cout<<"Ultimo reno llego de vacaciones"<<endl;
+			signal(mutex);
+			wait(renossem);
+			break;
+			renos=0;}
+		else{
+			renos++;
+			cout<<"Llega el reno"<<" "<<renos<<endl;
+			signal(mutex);}
+	}
+}
+void duende(){
+	int totalrenos=6;
+	int numduendes=3;
+	int duendes=0;
+	int renos=0;
+	while(1){
+		wait(mutex);
+		if(duendes==(numduendes-1)){
+			duendes++;
+			signal(santasem);
+			cout<<"Tres duendes despiertan a Santa"<<endl;
+			signal(mutex);
+			wait(duendessem);
+			duendes=0;
+			break;}
+		else{
+		    duendes++;
+		    signal(mutex);}
+	}
+}
+void main(){ 
+	cobegin{
+	santaclaus();renos();duende();}
+	}
