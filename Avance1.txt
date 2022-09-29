@@ -1,0 +1,231 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct pnodod{
+int info;
+struct pnodod *next;
+struct pnodod *prev;
+}LISTAD;
+
+typedef LISTAD* ptrNode;
+typedef enum {false,true} bool;
+
+void crea_ld(LISTAD **ld);
+int vacia(LISTAD **ld);
+void ins_ini_ld(LISTAD **ld, int v);
+void ins_final_ld(LISTAD **ld, int v);
+void ins_antes_ld(LISTAD **ld, int v);
+void ins_despues_ld(LISTAD **ld, int ref, int v);
+void eliminar_inicio(LISTAD**ld);
+void eliminar_final(LISTAD **ld);
+void escribir_ld(LISTAD **ld, char s);
+ptrNode ObtenerNodo(short n);
+void AgregarNodo(ptrNode *s, ptrNode *e, short n);
+bool EsPalindromo(ptrNode s, ptrNode e);
+
+
+
+int main() {
+  LISTAD *ld;
+  int v,ref,opcion;
+  char s;
+  ptrNode start = NULL, end = NULL;
+  char n; 
+  crea_ld(&ld);
+  do{
+    printf("\n1. Insertar al inicio\n");
+    printf("2. Insertar al final \n");
+    printf("3. Insertar antes de un numero\n");
+    printf("4. Insertar despues de un numero\n");
+    printf("5. Eliminar al inicio\n");
+    printf("6. Eliminar al final\n");
+    printf("7. Escribir lista\n");
+    printf("8. Es palindromo\n");
+    printf("9. Salir del programa\n\n");
+    printf("Ingrese su opcion: ");
+    scanf("%d", &opcion);
+    switch (opcion){
+      case 1:
+        printf("Ingrese el valor a insertar: ");
+        scanf("%d",&v);
+        ins_ini_ld(&ld, v);
+        break;
+      case 2:
+        printf("Ingrese el valor a insertar: ");
+        scanf("%d",&v);
+        ins_final_ld(&ld, v);
+        break;
+      case 3:
+        break;
+      case 4:
+        printf("Ingrese el valor a insertar: ");
+        scanf("%d",&v);
+        printf("Ingrese despues de que valor: ");
+        scanf("%d",&ref);
+        ins_despues_ld(&ld, ref, v);
+        break;
+      case 5:
+        eliminar_inicio(&ld);
+        break;
+      case 6:
+        eliminar_final(&ld);
+        break;
+      case 7:
+        escribir_ld(&ld, s);
+        break;
+      case 8:
+        printf("Ingresar texto:\n");
+        n = getchar();
+        getchar();
+        for(int k = n; k; k/=10){
+          AgregarNodo(&start,&end,(short)(k%10));}
+        printf("\n\n%ld %s palindromo", n,(EsPalindromo(start,end))?"es":"no es");
+
+      break;
+      
+      }
+    }
+    while (opcion != 9);
+  return 0;
+}
+
+void crea_ld(LISTAD **ld){
+  *ld=NULL;
+}
+
+int vacia(LISTAD **ld){
+  return (*ld==NULL);
+}
+
+void ins_ini_ld(LISTAD **ld, int v){
+  LISTAD *paux;
+  paux=(LISTAD*)malloc(sizeof(LISTAD));
+  paux->info=v;
+  paux->next=NULL;
+  paux->prev=NULL;
+
+  if(*ld==NULL) //lista vacia)
+  {
+    paux->next=*ld;
+    *ld=paux;
+  }
+  else{
+    paux->next=*ld;
+    (*ld)->prev=paux;
+    // paux->prev=paux;
+    *ld=paux;
+  }
+}
+
+void ins_final_ld(LISTAD **ld,int v){
+  LISTAD *paux, *qaux;
+  paux=(LISTAD*)malloc(sizeof(LISTAD));
+  paux->info=v;
+  paux->next=NULL;
+  paux->prev=NULL; //ACA
+  
+  if(*ld==NULL)
+    *ld=paux;
+  else{
+    qaux=*ld;
+    while(qaux->next!=NULL){
+      qaux=qaux->next;}
+    qaux->next=paux;
+    paux->prev=qaux; //ACA
+  }
+}
+
+void ins_despues_ld(LISTAD **ld, int ref, int v){
+  LISTAD *paux, *qaux, *raux;
+  qaux=*ld;
+  while((qaux->next!=NULL) && (qaux->info!=ref)){
+    qaux=qaux->next;
+    raux=qaux->next;
+  }
+  paux=(LISTAD*)malloc(sizeof(LISTAD));
+  paux->info=v;
+  if(qaux==NULL){
+    paux->next=qaux->next;
+    qaux->next=paux;
+    paux->prev=qaux;
+  }
+  else{
+    paux->next=qaux->next;
+    paux->prev=qaux;
+    raux->prev=paux;
+    qaux->next=paux;
+  }
+}
+
+void eliminar_inicio(LISTAD**ld){
+  LISTAD *paux;
+  paux=*ld;
+  *ld=paux->next;
+  free(paux);
+}
+
+void eliminar_final(LISTAD **ld){
+	LISTAD *paux,*qaux;
+	qaux=*ld;
+	if (qaux->next == NULL){
+		paux->next=*ld;
+		*ld=NULL;
+    }
+  else{
+    while(qaux->next->next!=NULL){
+      qaux=qaux->next;}
+    paux=qaux->next;
+    qaux->next=NULL;
+    }
+  free(paux);
+}
+
+void escribir_ld(LISTAD **ld, char s){
+  LISTAD *paux, *qaux;
+  paux=*ld;
+  if(s=='a') //se escribe de izq a derecha
+    while (paux!=NULL){
+      printf("%d\t", paux->info);
+      paux=paux->next;
+    }
+  else{
+    qaux=*ld;
+    while(qaux->next!=NULL)
+      qaux=qaux->next;
+    while(qaux!=NULL){
+      printf("%d\t", qaux->info);
+      qaux=qaux->prev;
+      }
+  }
+}
+
+ptrNode ObtenerNodo(short n){
+  ptrNode nuevoNodo = (ptrNode)malloc(sizeof(LISTAD));
+  nuevoNodo->next = nuevoNodo->prev = NULL;
+  nuevoNodo->info = n;
+  return nuevoNodo;
+}
+
+void AgregarNodo(ptrNode *s, ptrNode *e, short n){
+    ptrNode nuevoNodo = ObtenerNodo(n);
+    if(*s){
+        (*e)->next = nuevoNodo;
+        nuevoNodo->prev = *e;
+        *e = nuevoNodo;
+    }else{
+      *s = *e = nuevoNodo;
+    }
+
+}
+
+bool EsPalindromo(ptrNode s, ptrNode e){
+    while(s!=e && e->next!=s){
+        if(s->info!=e->info)
+            return false;
+        s=s->next;
+        e=e->prev;
+    }
+    return true;
+}
+
